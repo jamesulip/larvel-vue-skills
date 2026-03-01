@@ -1,6 +1,6 @@
 ---
 name: shadcn-app-shell
-description: Build an authenticated Laravel + Inertia + Vue app shell for internal dashboards with persistent layout, workflow navigation, standardized tables/forms, and clear system feedback.
+description: Build an authenticated Laravel + Inertia + Vue app shell with starter default pages, wrapper-based AppLayout pages, plain shadcn-vue table defaults for lists, and standardized form/feedback behavior.
 metadata:
   tags:
     - laravel
@@ -28,13 +28,14 @@ Prefer Vue 3 Composition API with `<script setup>` and TypeScript unless the pro
 
 1. Apply [shadcn-vue-prerequisites.md](shadcn-vue-prerequisites.md) before generating shell components.
 2. Apply [Laravel Inertia Vue skill](../laravel-inertia-vue/SKILL.md) for Inertia routing, props, and form conventions.
-3. Read [app-shell-architect.md](app-shell-architect.md) before generating any page layout.
-4. Read [workspace-navigation.md](workspace-navigation.md) when defining routes, breadcrumbs, preserved state, and keyboard shortcuts.
-5. Read [app-data-table-standard.md](app-data-table-standard.md) for any list or index screen.
-6. Read [inertia-crud-form-standard.md](inertia-crud-form-standard.md) for create/edit forms.
-7. Read [system-feedback-standard.md](system-feedback-standard.md) for toasts, loading states, and empty states.
-8. Read [production-workflow-awareness.md](production-workflow-awareness.md) for printing and work-unit lifecycle interfaces.
-9. Apply [final-behavior-rule.md](final-behavior-rule.md) to all generated UI.
+3. Read [blank-app-default-pages.md](blank-app-default-pages.md) to scaffold default pages in a blank Laravel app.
+4. Read [app-shell-architect.md](app-shell-architect.md) before generating any page layout.
+5. Read [workspace-navigation.md](workspace-navigation.md) when defining routes, breadcrumbs, preserved state, and keyboard shortcuts.
+6. Read [app-data-table-standard.md](app-data-table-standard.md) for any list or index screen.
+7. Read [inertia-crud-form-standard.md](inertia-crud-form-standard.md) for create/edit forms.
+8. Read [system-feedback-standard.md](system-feedback-standard.md) for toasts, loading states, and empty states.
+9. Read [production-workflow-awareness.md](production-workflow-awareness.md) for printing and work-unit lifecycle interfaces.
+10. Apply [final-behavior-rule.md](final-behavior-rule.md) to all generated UI.
 
 ## Non-Negotiables
 
@@ -44,3 +45,10 @@ Prefer Vue 3 Composition API with `<script setup>` and TypeScript unless the pro
 - If `shadcn-vue` is not initialized, initialize it before generating components.
 - Apply `laravel-inertia-vue` conventions for page contracts, navigation state, and forms.
 - Optimize for operator throughput, not marketing presentation.
+
+## Skill-Creator Defaults
+
+- For blank app scaffolds, start from [blank-app-default-pages.md](blank-app-default-pages.md).
+- For list pages, default to plain shadcn-vue table primitives (`components/ui/table`), not `DataTable.vue`.
+- Use wrapper-based page structure with `Head` and `AppLayout :breadcrumbs`.
+- Treat advanced shell/table behavior as explicit upgrades, not baseline output.

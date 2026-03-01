@@ -3,6 +3,21 @@
 ## Purpose
 Provide clear, immediate operational feedback for every system action.
 
+## Starter Minimum (Blank App)
+Default starter pages (`Dashboard`, `Users`, `User Form`, `Settings`) must include:
+- Page-load skeletons where data is fetched
+- Submit button spinner for form submissions
+- Success/failure toast for create/update actions
+- Explicit empty state for list-like surfaces
+
+Do not delay starter scaffolding for advanced progress workflows.
+
+## Skill-Creator Default Contract
+For starter output, always include at least:
+- one loading state pattern where data loads
+- one success/failure toast path for mutations
+- one explicit empty state path for list surfaces
+
 ## Toast Notifications
 Use toast notifications for:
 - Saved

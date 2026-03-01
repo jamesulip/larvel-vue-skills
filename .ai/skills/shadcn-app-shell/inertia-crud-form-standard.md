@@ -3,6 +3,24 @@
 ## Purpose
 Treat forms as workspace panels, not standalone simple pages.
 
+## Starter Minimum (Blank App)
+For the default `User Form` starter page, require:
+- Sectioned card layout using `FormSection`
+- Validation rendering from `form.errors`
+- Submit loading state
+- Dirty-state confirmation on cancel
+
+Starter-first rule:
+- Keep the first scaffold minimal but complete.
+- Add advanced section depth and workflow-specific controls after baseline behavior is in place.
+
+## Skill-Creator Default Contract
+When asked for "form page", "create page", or "edit page" in starter scope:
+- generate sectioned form UI using `FormSection`
+- render backend errors from `form.errors`
+- show pending submit state on primary action
+- include cancel behavior with dirty-state confirmation
+
 ## Form Structure
 Implement card-based forms with sectioned content, for example:
 

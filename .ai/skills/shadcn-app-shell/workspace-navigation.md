@@ -4,9 +4,10 @@
 Make navigation feel like a desktop application, not a series of disconnected web pages.
 
 ## Breadcrumb System
-- Generate breadcrumbs from route names and route metadata.
-- Require route metadata for breadcrumb labels, for example: `meta: { breadcrumb: "Projects" }`.
+- Define breadcrumbs per page and pass them into `AppLayout`.
+- Use page-local `breadcrumbs` arrays with objects: `{ title: string, href?: string }`.
 - Support deep trails such as: `Projects / {EntityLabel} #{id} / Production`.
+- Do not depend on Vue Router metadata for breadcrumb generation in Inertia pages.
 
 ## Remembered Page State
 On filter changes, pagination changes, sorting changes, and table navigation:
@@ -27,3 +28,8 @@ Create:
 ## Behavior Notes
 - Scope shortcuts to avoid conflicts while typing in input fields.
 - Keep command execution deterministic and fast.
+
+## Skill-Creator Guidance
+- Default breadcrumbs must be page-local and passed through `AppLayout`.
+- For starter pages, prioritize preserved state/scroll on table filter and pagination interactions.
+- Keyboard shortcuts are optional in starter output unless explicitly requested.
