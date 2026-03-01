@@ -1,6 +1,14 @@
 ---
 name: shadcn-app-shell
-description: "Build and enforce an authenticated Laravel + Inertia + Vue internal application shell with persistent layout, workflow-first navigation, standardized data tables/forms, feedback patterns, and production lifecycle UX. Use when scaffolding or refactoring back-office SPA dashboards, AppLayout/Sidebar/Topbar/PageContainer structure, CRUD list/form modules, keyboard shortcuts, and operator-focused workflow screens. Keywords: vue, laravel, inertia, shadcn-vue, dashboard, app-shell."
+description: Build an authenticated Laravel + Inertia + Vue app shell for internal dashboards with persistent layout, workflow navigation, standardized tables/forms, and clear system feedback.
+metadata:
+  tags:
+    - laravel
+    - inertia
+    - vue
+    - shadcn-vue
+    - app-shell
+    - dashboard
 ---
 
 # Shadcn App Shell
@@ -9,6 +17,12 @@ description: "Build and enforce an authenticated Laravel + Inertia + Vue interna
 
 Use this skill to build ERP-style internal dashboards where pages render inside a persistent shell and operators prioritize speed, clarity, and repeatability.
 Prefer Vue 3 Composition API with `<script setup>` and TypeScript unless the project explicitly requires a different style.
+
+## When To Use
+
+- Scaffold a new internal Laravel + Inertia + Vue operations console.
+- Refactor an existing back-office UI to use a persistent `AppLayout`.
+- Standardize list tables, CRUD forms, keyboard UX, and feedback states across modules.
 
 ## Quick Start
 

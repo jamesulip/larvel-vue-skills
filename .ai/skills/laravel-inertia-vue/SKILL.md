@@ -1,6 +1,14 @@
 ---
 name: laravel-inertia-vue
-description: Implement and maintain Laravel + Inertia + Vue applications with consistent patterns for installation checks, app bootstrap, page/layout wiring, navigation state, shared props, and server-validated forms. Use when working on Inertia controllers, `resources/js/app.ts`, Vue pages under `resources/js/pages`, Link/router navigation, filters/pagination preserving state, and CRUD forms using `useForm`.
+description: Implement Laravel + Inertia + Vue application patterns for setup, page/layout wiring, shared props, navigation state, and server-validated forms.
+metadata:
+  tags:
+    - laravel
+    - inertia
+    - vue
+    - spa
+    - crud
+    - forms
 ---
 
 # Laravel Inertia Vue
@@ -9,6 +17,13 @@ description: Implement and maintain Laravel + Inertia + Vue applications with co
 
 Use this skill to apply stable Inertia.js patterns in Laravel back-office SPAs.
 Favor deterministic page wiring, server-driven data flow, and predictable navigation/form behavior.
+
+## When To Use
+
+- Work on Inertia controllers returning `Inertia::render(...)`.
+- Build or refactor `resources/js/app.ts` and page layout wiring.
+- Implement filters, pagination, and preserved state flows.
+- Implement create/edit forms using `useForm` with Laravel validation.
 
 ## Quick Start
 
