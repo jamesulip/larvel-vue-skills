@@ -1,6 +1,6 @@
 ---
 name: laravel-inertia-vue
-description: Implement Laravel + Inertia + Vue application patterns for setup, page/layout wiring, shared props, navigation state, and server-validated forms.
+description: Coordinate modular Vue 3 + Inertia Laravel app-shell skills using rule-first retrieval.
 metadata:
   tags:
     - laravel
@@ -15,28 +15,28 @@ metadata:
 
 ## Overview
 
-Use this skill to apply stable Inertia.js patterns in Laravel back-office SPAs.
-Favor deterministic page wiring, server-driven data flow, and predictable navigation/form behavior.
+Use this skill as the coordinator for modular Inertia behavior skills.
+Load focused subsystem skills based on task intent to avoid monolithic retrieval noise.
 
 ## When To Use
 
-- Work on Inertia controllers returning `Inertia::render(...)`.
-- Build or refactor `resources/js/app.ts` and page layout wiring.
-- Implement filters, pagination, and preserved state flows.
-- Implement create/edit forms using `useForm` with Laravel validation.
+- You are generating or refactoring Vue 3 + Inertia admin/app-shell code.
+- You need to select protocol, pages/layouts, data/state, forms, or runtime behavior rules.
 
-## Quick Start
+## Skill Pack
 
-1. Read [references/prerequisites.md](references/prerequisites.md) to verify or install Inertia.
-2. Read [references/page-layouts.md](references/page-layouts.md) when creating or refactoring pages/layouts.
-3. Read [references/navigation-and-state.md](references/navigation-and-state.md) for search, filters, pagination, and preserved state.
-4. Read [references/forms-and-validation.md](references/forms-and-validation.md) for create/edit forms and Laravel validation mapping.
-5. Read [references/shared-data.md](references/shared-data.md) for shared props, flash messages, and authorization context.
+1. [inertia-protocol-behavior/SKILL.md](inertia-protocol-behavior/SKILL.md)
+2. [inertia-vue-pages-and-layouts/SKILL.md](inertia-vue-pages-and-layouts/SKILL.md)
+3. [inertia-data-and-state/SKILL.md](inertia-data-and-state/SKILL.md)
+4. [inertia-forms-and-validation/SKILL.md](inertia-forms-and-validation/SKILL.md)
+5. [inertia-runtime-behaviors/SKILL.md](inertia-runtime-behaviors/SKILL.md)
+6. [rules/global/global-constraints.md](rules/global/global-constraints.md)
 
 ## Non-Negotiables
 
-- Keep Laravel validation as the only source of truth for form errors.
-- Keep Inertia pages focused on rendering and interaction; keep domain rules in Laravel.
-- Preserve state and scroll on workflow-heavy navigation interactions.
-- Use route names and structured params rather than hardcoded URL strings where possible.
-- Use Vue 3 Composition API with `<script setup>` unless project constraints require otherwise.
+- Vue 3 Composition API only (`<script setup>`).
+- No Vue Router.
+- No axios/fetch for page data.
+- No client stores duplicating server props.
+- Server routing is source of truth.
+- Do not generate Laravel controller logic.
