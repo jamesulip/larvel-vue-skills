@@ -1,6 +1,6 @@
-[submodule ".ai/skills/shadcn-app-shell"]
-	path = .ai/skills/shadcn-app-shell
+[submodule "shadcn-app-shell"]
+	path = shadcn-app-shell
 	url = https://github.com/jamesulip/shadcn-app-shell.git
-[submodule ".ai/skills/laravel-inertia-vue"]
-	path = .ai/skills/laravel-inertia-vue
+[submodule "laravel-inertia-vue"]
+	path = laravel-inertia-vue
 	url = git@github.com:jamesulip/skill-laravel-inertia-vue.git
