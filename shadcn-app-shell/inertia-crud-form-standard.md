@@ -16,6 +16,7 @@ Starter-first rule:
 
 ## Skill-Creator Default Contract
 When asked for "form page", "create page", or "edit page" in starter scope:
+- apply shared page template anatomy from [page-template-ui-consistency.md](page-template-ui-consistency.md)
 - generate sectioned form UI using `FormSection`
 - render backend errors from `form.errors`
 - show pending submit state on primary action
@@ -59,3 +60,11 @@ Support these actions:
 | Cancel | Confirm if form is dirty |
 
 Dirty detection is mandatory.
+
+## Consistency Addendum
+- Keep form pages inside shared wrapper anatomy: `Head` + `AppLayout :breadcrumbs` + `PageContainer`.
+- Keep page header placement consistent with list/settings pages (title/description left, actions right).
+- Keep primary/secondary action ordering consistent across forms:
+  - Primary: `Save`
+  - Secondary: `Save & Close`
+  - Tertiary: `Cancel`

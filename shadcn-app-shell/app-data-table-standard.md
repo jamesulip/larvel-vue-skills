@@ -37,10 +37,13 @@ Generated default list pages should include:
 - loading skeleton rows
 - explicit empty state UI
 - row-level actions via dropdown when actions are present
+- shared page anatomy from [page-template-ui-consistency.md](page-template-ui-consistency.md)
 
 Output schema for generated pages:
 - `Head` title must match page context (`Users`, `Issues`, etc.)
 - `AppLayout :breadcrumbs` must be present
+- page body must be wrapped in `PageContainer`
+- page header must follow shared title/description/actions placement
 - table content must use `components/ui/table` primitives
 - avoid custom design tokens and raw HTML table styling systems
 
@@ -207,10 +210,11 @@ Starter-first rule:
 ## Skill-Creator Execution Steps
 When generating a table page with this skill:
 1. Select mode (Default / Minimal / Advanced) from prompt wording.
-2. Set page title and breadcrumbs.
-3. Render table with shadcn-vue primitives.
-4. Add loading and empty-state path unless prompt explicitly asks to omit.
-5. Add optional row actions/pagination based on mode.
+2. Apply the shared page template contract from [page-template-ui-consistency.md](page-template-ui-consistency.md).
+3. Set page title and breadcrumbs.
+4. Render table with shadcn-vue primitives.
+5. Add loading and empty-state path unless prompt explicitly asks to omit.
+6. Add optional row actions/pagination based on mode.
 
 ## Advanced Capabilities (Optional)
 If the module explicitly requires a power-table workflow, add:
@@ -252,6 +256,7 @@ Do not introduce freeform status colors.
 ## Acceptance Checklist
 - Mode matches prompt intent (Default/Minimal/Advanced).
 - Page uses `Head` and `AppLayout :breadcrumbs`.
+- Page follows shared `PageContainer` + header template contract.
 - Table uses shadcn-vue `Table*` primitives.
 - Sample complexity matches request (especially for minimal prompts).
 - No custom design-token styling copied from external templates.

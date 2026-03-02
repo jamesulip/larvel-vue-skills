@@ -5,6 +5,7 @@ Skill pack for building a persistent Laravel + Inertia + Vue internal operations
 ## What this skill provides
 
 - App shell architecture for authenticated dashboards
+- Shared page-template UI/UX consistency contract
 - Workspace navigation and persistent context patterns
 - Standardized list/table behavior for index pages
 - CRUD form conventions with Inertia behavior alignment

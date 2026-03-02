@@ -11,6 +11,7 @@ Every starter page must follow this structure:
 ```vue
 <script setup lang="ts">
 import AppLayout from '@/layouts/AppLayout.vue'
+import PageContainer from '@/components/layout/PageContainer.vue'
 import { Head } from '@inertiajs/vue3'
 
 const breadcrumbs = [
@@ -22,7 +23,21 @@ const breadcrumbs = [
   <Head title="Dashboard" />
 
   <AppLayout :breadcrumbs="breadcrumbs">
-    <!-- page goes here -->
+    <PageContainer>
+      <section class="space-y-4">
+        <header class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+          <div class="space-y-1">
+            <h1 class="text-xl font-semibold tracking-tight">Dashboard</h1>
+            <p class="text-muted-foreground text-sm">Workspace summary and key actions.</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <!-- page actions -->
+          </div>
+        </header>
+
+        <!-- page body -->
+      </section>
+    </PageContainer>
   </AppLayout>
 </template>
 ```
@@ -30,7 +45,10 @@ const breadcrumbs = [
 Rules:
 - Use `<Head>` for page title.
 - Wrap page content in `<AppLayout :breadcrumbs="breadcrumbs">`.
+- Wrap inner content with `<PageContainer>`.
+- Use a shared header block pattern (title/description on left, actions on right).
 - Keep `breadcrumbs` local to each page and pass as array objects: `{ title: string, href?: string }`.
+- Apply [page-template-ui-consistency.md](page-template-ui-consistency.md) for all starter pages.
 
 ## Skill-Creator Execution Order
 When generating starter pages, execute in this order:
@@ -102,6 +120,7 @@ Do not mimic Linear branding or visuals.
 
 ## Output Acceptance Checklist
 - All starter pages use `Head` + `AppLayout :breadcrumbs`.
+- All starter pages use `PageContainer` and shared header hierarchy.
 - `Users/Index.vue` uses `components/ui/table` primitives (not `DataTable.vue`).
 - Form starter renders server validation errors and pending submit state.
 - List starter renders loading and empty states.
