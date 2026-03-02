@@ -5,15 +5,15 @@ Monorepo of reusable skill packs for Laravel + Inertia + Vue application work.
 ## Included skill packs
 
 ### 1) Laravel Inertia Vue
-Rule-first skill pack for Laravel + Inertia + Vue 3 application patterns.
+Rule-first skill pack for Laravel + Inertia + Vue 3 patterns with deterministic internal dashboard app-shell enforcement.
 
 - Path: `laravel-inertia-vue/`
 - Entry: `laravel-inertia-vue/SKILL.md`
-- Focus: page/layout patterns, shared props/state, forms/validation, Inertia protocol/runtime behavior
+- Focus: deterministic dashboard app-shell conventions, page/layout patterns, shared props/state, forms/validation, Inertia protocol/runtime behavior
 
 Suggested prompt:
 
-> Use $laravel-inertia-vue to implement robust Laravel + Inertia + Vue pages, forms, navigation, shared props, and validation flows.
+> Use $laravel-inertia-vue to enforce a deterministic Laravel + Inertia + Vue internal dashboard app-shell contract with shadcn-vue primitives, plus robust pages, forms, navigation, shared props, and validation flows.
 
 ### 2) Shadcn App Shell
 Skill pack for building a persistent Laravel + Inertia + Vue internal operations shell with shadcn-vue conventions.
