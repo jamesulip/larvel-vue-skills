@@ -1,3 +1,14 @@
+---
+name: shadcn-app-shell
+description: Enforce a deterministic Laravel + Inertia + Vue application-shell UI contract for internal dashboard pages using shadcn-vue primitives.
+compatibility: vscode
+tags:
+   - laravel
+   - inertia
+   - vue
+   - shadcn
+---
+
 # Skill: shadcn-app-shell
 
 ## Capability
