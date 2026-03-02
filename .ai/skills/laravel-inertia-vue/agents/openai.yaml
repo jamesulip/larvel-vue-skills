@@ -1,4 +1,0 @@
-interface:
-  display_name: "Laravel Inertia Vue"
-  short_description: "Operational patterns for Laravel + Inertia + Vue"
-  default_prompt: "Use $laravel-inertia-vue to implement robust Laravel + Inertia + Vue pages, forms, navigation, shared props, and validation flows."

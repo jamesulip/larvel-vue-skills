@@ -1,4 +1,0 @@
-interface:
-  display_name: "Shadcn App Shell"
-  short_description: "Persistent Laravel Inertia Vue app shell"
-  default_prompt: "Use $shadcn-app-shell to scaffold an authenticated Laravel + Inertia + Vue application shell optimized for internal operations workflows."
