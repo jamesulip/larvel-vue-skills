@@ -1,57 +1,50 @@
----
-name: shadcn-app-shell
-description: Build an authenticated Laravel + Inertia + Vue app shell with starter default pages, wrapper-based AppLayout pages, plain shadcn-vue table defaults for lists, and standardized form/feedback behavior.
-metadata:
-  tags:
-    - laravel
-    - inertia
-    - vue
-    - shadcn-vue
-    - app-shell
-    - dashboard
----
+# Skill: shadcn-app-shell
 
-# Shadcn App Shell
+## Capability
+Enforce a deterministic Laravel + Inertia + Vue application-shell UI contract for internal dashboard pages using shadcn-vue primitives.
 
-## Overview
+## Primary Outcome
+Generated pages must look and behave like one product:
+- same shell
+- same page anatomy
+- same spacing rhythm
+- same action placement
+- same CRUD behavior
 
-Use this skill to build ERP-style internal dashboards where pages render inside a persistent shell and operators prioritize speed, clarity, and repeatability.
-Prefer Vue 3 Composition API with `<script setup>` and TypeScript unless the project explicitly requires a different style.
+## Use This Skill When
+- Generating any authenticated page or page template
+- Building CRUD modules (`index`, `create`, `store`, `show`, `edit`, `update`, `destroy`)
+- Building tables, filters, pagination, row actions, bulk actions
+- Building create/edit forms with server validation
+- Refactoring inconsistent pages to app-shell conventions
 
-## When To Use
+## Do Not Use This Skill For
+- Marketing pages
+- Landing pages
+- Public brochure layouts
+- Standalone SPA-only experiments without Laravel route/controller ownership
 
-- Scaffold a new internal Laravel + Inertia + Vue operations console.
-- Refactor an existing back-office UI to use a persistent `AppLayout`.
-- Standardize list tables, CRUD forms, keyboard UX, and feedback states across modules.
+## Deterministic Activation
+If prompt includes any of these intents, activate this skill:
+- "create page", "template page", "module", "crud", "form", "list", "index", "show page"
+- "make UI consistent", "same layout", "same UX", "dashboard style"
 
-## Quick Start
+## Decision Protocol
+1. Identify resource name and route scope.
+2. Determine page type:
+   - List: `index`
+   - Create: `create`
+   - Edit: `edit`
+   - Detail: `show`
+3. Enforce backend ownership:
+   - page must map to Laravel route
+   - route must map to controller action
+   - controller must return `Inertia::render(...)` with props
+4. Enforce shell contract from `rules.md` before writing page markup.
+5. Apply page-specific blueprint from `patterns.md`.
+6. Validate completion using `rules.md` acceptance checks.
 
-1. Apply [shadcn-vue-prerequisites.md](shadcn-vue-prerequisites.md) before generating shell components.
-2. Apply [Laravel Inertia Vue skill](../laravel-inertia-vue/SKILL.md) for Inertia routing, props, and form conventions.
-3. Read [blank-app-default-pages.md](blank-app-default-pages.md) to scaffold default pages in a blank Laravel app.
-4. Read [app-shell-architect.md](app-shell-architect.md) before generating any page layout.
-5. Read [page-template-ui-consistency.md](page-template-ui-consistency.md) before generating any template/page.
-6. Read [workspace-navigation.md](workspace-navigation.md) when defining routes, breadcrumbs, preserved state, and keyboard shortcuts.
-7. Read [app-data-table-standard.md](app-data-table-standard.md) for any list or index screen.
-8. Read [inertia-crud-form-standard.md](inertia-crud-form-standard.md) for create/edit forms.
-9. Read [system-feedback-standard.md](system-feedback-standard.md) for toasts, loading states, and empty states.
-10. Read [production-workflow-awareness.md](production-workflow-awareness.md) for printing and work-unit lifecycle interfaces.
-11. Apply [final-behavior-rule.md](final-behavior-rule.md) to all generated UI.
-
-## Non-Negotiables
-
-- Keep `AppLayout` mounted across Inertia visits.
-- Keep navigation and workspace context persistent.
-- Standardize behavior across modules instead of creating one-off patterns.
-- Standardize page anatomy across modules using [page-template-ui-consistency.md](page-template-ui-consistency.md).
-- If `shadcn-vue` is not initialized, initialize it before generating components.
-- Apply `laravel-inertia-vue` conventions for page contracts, navigation state, and forms.
-- Optimize for operator throughput, not marketing presentation.
-
-## Skill-Creator Defaults
-
-- For blank app scaffolds, start from [blank-app-default-pages.md](blank-app-default-pages.md).
-- Apply [page-template-ui-consistency.md](page-template-ui-consistency.md) as the baseline contract for every generated template/page.
-- For list pages, default to plain shadcn-vue table primitives (`components/ui/table`), not `DataTable.vue`.
-- Use wrapper-based page structure with `Head` and `AppLayout :breadcrumbs`.
-- Treat advanced shell/table behavior as explicit upgrades, not baseline output.
+## Generation Preference
+- Prefer conformity over creativity.
+- Prefer predictable operator workflows over unique page designs.
+- Prefer reusable primitives over one-off custom layout systems.
